@@ -1,0 +1,4 @@
+/* miniprogram/pages/create/index.wxss */
+.active{
+  color:blueviolet;
+}

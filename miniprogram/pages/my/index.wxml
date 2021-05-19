@@ -1,0 +1,17 @@
+<view>
+  <view wx:if="{{myQuestionList.length}}">
+    <view wx:for="{{myQuestionList}}" wx:key="index" bindtap="toDetailPage" data-id="{{item._id}}">
+      <h2>{{item.title}}</h2>
+      <h2>{{item.type.title}}</h2>
+      <p>
+        <b>{{item.answer}}</b>
+        <span>答题数量</span>
+      </p>
+    </view>
+    <add-btn />
+  </view>
+  <view wx:else>
+    <button>创建</button>
+    <button>前往广场</button>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+/* components/addBtn/index.wxss */
+.addbtn{
+  width: 80rpx;
+  height: 80rpx;
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+  background: rgba(21, 126, 251, 1);
+  color:#fff;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 50%;
+  font-size: 40rpx;
+}

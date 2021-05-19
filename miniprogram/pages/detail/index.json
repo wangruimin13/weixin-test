@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "answerDialog":"../../components/answerDialog/index"
+  }
+}

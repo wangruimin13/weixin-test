@@ -1,0 +1,38 @@
+/* components/answerDailog/index.wxss */
+.maskDialog{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.6);
+  z-index: 100;
+}
+
+.contentDialog{
+  width: 100%;
+  height: 300rpx;
+  background: #fff;
+  border-bottom-right-radius: 10rpx;
+  border-bottom-left-radius: 10rpx;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 101;
+}
+
+.dialog-btn{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialog-btn button{
+  background: none;
+}
+.close{
+  color:#333;
+}
+.close{
+  color:rgba(21, 126, 251, 1);
+}

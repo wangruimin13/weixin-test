@@ -1,0 +1,12 @@
+<!--components/answerDailog/index.wxml-->
+<view class="maskDialog" bindtap="closeDialog"></view>
+<view class="contentDialog">
+  <h2>
+    {{title}}
+  </h2>
+  <textarea bindinput="changeText" value="{{answerText}}"></textarea>
+  <view class="dialog-btn">
+    <button class="close" bindtap="closeDialog">取消</button>
+    <button class="send" bindtap="sendDialog">发布</button>
+  </view>
+</view>

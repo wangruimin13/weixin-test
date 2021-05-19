@@ -1,0 +1,31 @@
+<view>
+  <form>
+    <view class="weui-cell__bd">
+        <input 
+          class="weui-input" 
+          name="input" 
+          placeholder="请输入题目" 
+          bindinput="changetext"
+          value="{{text}}"
+        />
+    </view>
+    <view class="weui-cell__bd">
+        <text>选择类型</text>
+        <view>
+           <text 
+              wx:for="{{navdata}}" 
+              wx:key="key" 
+              class="{{index===activeIndex ? 'active' : ''}}"
+              bindtap="changeContent"
+              data-curindex="{{index}}"
+              id="{{'nav-'+index}}"
+            >
+                {{item.title}}
+            </text>
+        </view>
+    </view>
+    <view>
+      <button bindtap="createQuestion">创建</button>
+    </view>
+  </form>
+</view>

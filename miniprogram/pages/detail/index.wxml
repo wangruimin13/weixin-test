@@ -1,0 +1,26 @@
+<!--miniprogram/pages/detail/index.wxml-->
+<view>
+  <h2>{{contentData.questionData.title}} <b>{{contentData.questionData.answer}}</b></h2>
+  <p>{{contentData.questionData.type.title}}</p>
+  <view>
+    <view>回答 <button open-type="getUserInfo" bindgetuserinfo="showDialog">写回答</button></view>
+    <view wx:for="{{contentData.answerData}}" wx:key="_id">
+        <dl>
+          <dt>
+
+          </dt>
+          <dd>
+            <text>{{item.userinfo.nickName}}</text>
+            <text>{{item.format_time}}</text>
+            <text>{{item.content}}</text>
+          </dd>
+        </dl>
+    </view>
+  </view>
+</view>
+<answerDialog 
+  title="{{contentData.questionData.title}}" 
+  bindclose="hideDialog"
+  bindsuccess="sendDialog"
+  wx:if="{{dialogOpen}}"
+/>

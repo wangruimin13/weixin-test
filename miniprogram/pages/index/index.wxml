@@ -1,0 +1,35 @@
+<!--miniprogram/pages/index/index.wxml-->
+<scroll-view 
+  scroll-x="{{true}}" 
+  class="nav" 
+  scroll-with-animation="{{true}}"
+  scroll-left="{{scrollToLeft}}"
+>
+  <view class="nav-cont">
+    <text 
+      wx:for="{{navdata}}" 
+      wx:key="key" 
+      class="{{index===activeIndex ? 'active' : ''}}"
+      bindtap="changeContent"
+      data-curindex="{{index}}"
+      id="{{'nav-'+index}}"
+    >
+        {{item.title}}
+    </text>
+  </view>
+</scroll-view>
+<scroll-view 
+  class="content" 
+  scroll-y="{{true}}"
+  bindscrolltolower="scrollUpdate"
+>
+  <view class="questionList">
+    <view wx:for="{{content}}" wx:key="_id" bindtap="toDetail" data-detailid="{{item._id}}">
+      <view>
+        <h2>{{item.title}}</h2>
+        <span>共{{item.answer}}个回答</span>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<add-btn />

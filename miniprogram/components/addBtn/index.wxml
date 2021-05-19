@@ -1,0 +1,1 @@
+<view class="addbtn" bindtap="toCreatePage">+</view>
